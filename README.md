@@ -58,9 +58,9 @@ npm start
 
 ---
 
-🌐 Live Demo
+🌐 Live
 
-(Coming soon)
+(https://melodify-music-players.netlify.app/)
 
 ---
 
