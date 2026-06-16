@@ -16,8 +16,9 @@ body{
 .container{
   display:flex;
   min-height:100vh;
-  width:100%;
 }
+
+/* Sidebar */
 
 .sidebar{
   width:230px;
@@ -27,15 +28,17 @@ body{
   flex-shrink:0;
 }
 
-.sidebar p{
-  margin:20px 0;
-  cursor:pointer;
+.logo{
+  width:180px;
+  max-width:100%;
+  display:block;
+  margin:0 auto 30px;
 }
 
-.logo{
-  width:200px;
-  max-width:100%;
-  margin-bottom:20px;
+.sidebar p{
+  margin:18px 0;
+  cursor:pointer;
+  font-size:20px;
 }
 
 .active{
@@ -43,10 +46,11 @@ body{
   font-weight:bold;
 }
 
+/* Main Content */
+
 .main{
   flex:1;
-  min-width:0;
-  padding:40px;
+  padding:30px;
   overflow-x:hidden;
 }
 
@@ -54,24 +58,27 @@ body{
   display:block;
   width:min(600px,90%);
   height:50px;
-  margin:0 auto 40px;
+  margin:0 auto 30px;
   border:none;
-  border-radius:25px;
+  outline:none;
+  border-radius:30px;
   padding:0 20px;
   font-size:16px;
 }
 
 .main h1{
+  text-align:center;
   font-size:40px;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
+
+/* Songs */
 
 .songs{
   display:flex;
   flex-wrap:wrap;
-  gap:25px;
   justify-content:center;
-  margin-top:30px;
+  gap:25px;
 }
 
 .song-card{
@@ -81,8 +88,7 @@ body{
   border-radius:12px;
   cursor:pointer;
   transition:0.3s;
-  flex:1 1 220px;
-  max-width:250px;
+  width:220px;
 }
 
 .song-card:hover{
@@ -92,15 +98,15 @@ body{
 
 .song-card img{
   width:100%;
-  height:220px;
+  height:200px;
   object-fit:cover;
   border-radius:10px;
 }
 
 .play-icon{
   position:absolute;
-  bottom:30px;
-  right:20px;
+  bottom:20px;
+  right:15px;
   opacity:0;
   transition:0.3s;
   color:black;
@@ -110,16 +116,17 @@ body{
   opacity:1;
 }
 
+/* Player */
+
 .player{
   position:fixed;
   bottom:0;
   left:0;
   width:100%;
-  min-height:80px;
   background:#181818;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   padding:10px 20px;
   z-index:1000;
 }
@@ -145,7 +152,7 @@ body{
   border:none;
   color:white;
   font-size:22px;
-  margin:0 10px;
+  margin:0 8px;
   cursor:pointer;
 }
 
@@ -163,6 +170,8 @@ body{
   width:80px;
 }
 
+/* Playlists */
+
 .playlists{
   display:flex;
   flex-wrap:wrap;
@@ -175,7 +184,6 @@ body{
   padding:20px;
   border-radius:10px;
   width:160px;
-  color:white;
   cursor:pointer;
   transition:0.3s;
 }
@@ -185,7 +193,7 @@ body{
   transform:scale(1.05);
 }
 
-/* Responsive */
+/* Mobile */
 
 @media (max-width:768px){
 
@@ -196,29 +204,41 @@ body{
   .sidebar{
     width:100%;
     min-height:auto;
+    padding:15px;
+  }
+
+  .logo{
+    width:140px;
+    margin:0 auto 20px;
+  }
+
+  .sidebar p{
+    margin:10px 0;
+    font-size:18px;
   }
 
   .main{
-    padding:20px;
+    padding:15px;
   }
 
   .main h1{
     font-size:28px;
   }
 
-  .songs{
-    justify-content:center;
+  .search-bar{
+    width:95%;
+    margin:10px auto 20px;
   }
 
   .song-card{
-    max-width:100%;
+    width:100%;
+    max-width:300px;
   }
 
   .player{
     flex-wrap:wrap;
-    gap:10px;
     justify-content:center;
-    padding:10px;
+    gap:10px;
   }
 
   .player-right{
